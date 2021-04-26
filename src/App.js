@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import Navbar from "./Navbar";
+import SearchBar from "./SearchBar";
+import SearchResults from "./SearchResults";
 
 function App() {
   return (
     <div className="App">
-      Hello world
+      <Navbar />
+      <SearchBar />
+      <SearchResults />
     </div>
   );
 }
