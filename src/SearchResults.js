@@ -1,9 +1,10 @@
 import React from "react";
+import ResultCards from "./ResultCards";
 
 function SearchResults(props) {
     return (
-        <div>
-efg
+        <div id="results-main">
+            <ResultCards />
         </div>
     );
 }

@@ -12,6 +12,12 @@ code {
     monospace;
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #navbar {
   height: 75px;
   width: 100%;
@@ -20,7 +26,39 @@ code {
 
 #nav-title {
   font-size: 30px;
-  top: 100%;
   text-align: center;
 }
 
+#app-main {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: blue;
+}
+
+#search-input {
+  margin-top: 20px;
+  height: 50px;
+  width: 500px;
+  font-size: 20px;
+}
+
+#results-card {
+  padding: 10px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 300px;
+  width: 500px; 
+}
+
+#card-name{
+  font-size: 30px;
+}
+
+#result-profile-data{
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+}
