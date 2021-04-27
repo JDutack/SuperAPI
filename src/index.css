@@ -25,11 +25,14 @@ code {
 }
 
 #nav-title {
-  font-size: 30px;
+  
+  font-family: 'Lobster', cursive;
+  font-size: 55px;
   text-align: center;
 }
 
 #app-main {
+  min-height: 750px;
   width: 1000px;
   display: flex;
   flex-direction: column;
@@ -46,20 +49,23 @@ code {
 
 #results-card {
   background-color: red;
-  padding: 10px 0px 0px 0px;
+  padding: 5px 0px 0px 0px;
+  margin: 10px;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   flex-direction: row;
-  height: 300px;
+  height: 280px;
   width: 500px; 
 }
 
-#card-name{
+#card-name {
+  text-align: center;
   font-size: 30px;
 }
 
-#result-profile-data{
-  display: flex;
-  flex-direction: column;
-  padding-left: 25px;
+#result-profile-data {
+  text-align: left;
+  width: 275px;
+  height: 280px;
 }

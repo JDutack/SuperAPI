@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
 import SearchResults from "./SearchResults";
+import HomePage from "./HomePage";
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
     <div className="App">
       <Navbar />
       <div id="app-main">
+      {/* <HomePage ResultCards data={superhero} /> */} 
         <SearchBar searchText={searchText} handleChange={handleChange} />
         <SearchResults superheroData={superheroData} />
       </div>
