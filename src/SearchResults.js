@@ -2,9 +2,14 @@ import React from "react";
 import ResultCards from "./ResultCards";
 
 function SearchResults(props) {
+
+    const {superheroData = []} = props;
+
     return (
         <div id="results-main">
-            <ResultCards />
+            {superheroData.map(superhero =>
+            <ResultCards data={superhero} />
+                )}
         </div>
     );
 }
