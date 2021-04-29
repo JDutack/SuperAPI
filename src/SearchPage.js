@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
 import SearchResults from "./SearchResults";
-import HomePage from "./HomePage";
 
 function SearchPage(props) {
 

@@ -1,13 +1,20 @@
 import React from "react";
-import Navbar from "./Navbar";
+import TeamCards from "./TeamCards.js";
 
 function HomePage(props) {
+    const {data} = props;
     
     return (
         <div className="App">
-    
             <div className="app-main">
-                <h1>Decimatio nam non subditos</h1>
+                <div id="supes-grid">
+                <a className="supes-cards"><TeamCards /></a>
+                <a className="supes-cards">atzo</a>
+                <a className="supes-cards">atzo</a>
+                <a className="supes-cards">atzo</a>
+                <a className="supes-cards">atzo</a>
+                <a className="supes-cards">atzo</a>
+                </div>
             </div>                        
         </div>
     );
