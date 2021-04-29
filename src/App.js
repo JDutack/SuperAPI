@@ -23,7 +23,7 @@ function App() {
         setSuperheroData([]);
       }
       setSearchText(searchTerm);
-       if (searchTerm.length > 3) {
+       if (searchTerm.length >= 3) {
            searchSuperHeroes();
        }
   }
