@@ -8,8 +8,10 @@ function ResultCards(props) {
 
 
     function handleAdd() {
-        }
-        const newList = list.concat({  });
+        const newList = list.concat({ 
+            name: data.name,
+            id: data.id
+         });
         setList(newList);
     }
 
@@ -26,6 +28,7 @@ function ResultCards(props) {
                 </div>
             </div>
         </div>
+        {console.log(list)}
         </div>
     );
 }
