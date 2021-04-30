@@ -30,7 +30,7 @@ function SearchPage(props) {
         <div className="App">
           <div className="app-main">
             <SearchBar searchText={searchText} handleChange={handleChange} />
-            <SearchResults superheroData={superheroData} />
+            <SearchResults superheroData={superheroData} /> 
           </div>
         </div>
       );
