@@ -13,7 +13,7 @@ function ResultCards(props) {
     "powerstats": data.powerstats
 }
 
-    const [list] = useState(superHeroList);
+    const [list, setList] = useState(superHeroList);
 
 
     function handleAdd() {
@@ -22,7 +22,8 @@ function ResultCards(props) {
             return superHeroInfo.alignment === hero.alignment;
         }
         if(!list.includes(superHeroInfo) && list.filter(filterByAlignment).length < 3) {
-            superHeroList.push(superHeroInfo);
+           superHeroList.push(superHeroInfo);
+           setList(superHeroList);
         }
     }
 
