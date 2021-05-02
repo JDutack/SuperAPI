@@ -17,7 +17,7 @@ function SearchPage(props) {
     function handleChange (e) {
         const searchTerm = e.target.value;
   
-        if(searchTerm.length == 0) {
+        if(searchTerm.length === 0) {
           setSuperheroData([]);
         }
         setSearchText(searchTerm);
