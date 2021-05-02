@@ -8,23 +8,22 @@ function ResultCards(props) {
     const superHeroInfo  = {
     "id": data.id,
     "name": data.name,
-    "alignment": data.biography.alignment
+    "alignment": data.biography.alignment,
+    "picture": data.image.url,
+    "powerstats": data.powerstats
 }
+
     const [list] = useState(superHeroList);
 
 
     function handleAdd() {
 
-    if(!list.includes(superHeroInfo)) {
-        if(list.length < 6) {
-        list.push(superHeroInfo);
-        
-   } 
-}
-            console.log("alignment", superHeroInfo.alignment)
-            console.log("superlist", superHeroList)
-            console.log("list", list)
-        
+        function filterByAlignment(hero) {
+            return superHeroInfo.alignment === hero.alignment;
+        }
+        if(!list.includes(superHeroInfo) && list.filter(filterByAlignment).length < 3) {
+            superHeroList.push(superHeroInfo);
+        }
     }
 
     return (
