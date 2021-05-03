@@ -6,7 +6,7 @@ function SearchResults(props) {
 
     return (
         <div id="results-main">
-            <ul>
+            <ul id="results-list">
             {superheroData.map(superhero =>
             <ResultCards data={superhero} />
                 )}

@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useReducer } from "react";
+import { Redirect } from "react-router";
+import {HeroContext} from "./App.js";
 
 const superHeroList = [];
 
+
 function ResultCards(props) {
     const {data} = props;
+    const [list, setList] = useState(superHeroList);
+    const { setHero } = useContext(HeroContext);
 
     const superHeroInfo  = {
     "id": data.id,
@@ -13,9 +18,6 @@ function ResultCards(props) {
     "powerstats": data.powerstats
 }
 
-    const [list, setList] = useState(superHeroList);
-
-
     function handleAdd() {
 
         function filterByAlignment(hero) {
@@ -23,15 +25,17 @@ function ResultCards(props) {
         }
         if(!list.includes(superHeroInfo) && list.filter(filterByAlignment).length < 3) {
            superHeroList.push(superHeroInfo);
-           setList(superHeroList);
+           setHero(superHeroList);
         }
+        console.log("results", superHeroList);
     }
 
     return (
+        
         <div>
             <li id="results-main" key={data.id}>
-                <div id="results-card">
-                    <div id="result-profile-pic"><img src={data.image.url} alt="imagen-super" height="275px"/></div>
+                <div id="results-card" >
+                    <div id="result-profile-pic"><img src={data.image.url} id="imagen-super" alt="imagen-super" height="275px"/></div>
                     <div id="result-profile-data">
                         <h1 id="result-card-name">{data.name}</h1>
                         <h2 id="result-card-fullname">{data.biography["full-name"]}</h2>

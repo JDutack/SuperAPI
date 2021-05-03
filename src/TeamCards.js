@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import  { HeroContext } from "./App";
 
 function TeamCards(props) {
+    const { hero } = useContext(HeroContext);
 
     return (
         <div>
             <div>
-                <div>
-                    <h1 id="team-card-name">Supe</h1>
-                    <h2 id="team-card-fullname">Clark Kent</h2>
-                    <span id="alignment">Alineación: good</span>
-                </div>
+                <ul>{hero.map(({ superHeroList }) => (<li key={"id"}>{"name"}</li>))}</ul>
             </div>
+            {console.log("teamcards", hero)}
         </div>
     );
 }

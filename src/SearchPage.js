@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, createContext, useReducer } from "react";
 import SearchBar from "./SearchBar";
 import SearchResults from "./SearchResults";
+
+
 
 function SearchPage(props) {
 
@@ -27,12 +29,14 @@ function SearchPage(props) {
     }
 
     return (
+      <div>
         <div className="App">
           <div className="app-main">
             <SearchBar searchText={searchText} handleChange={handleChange} />
             <SearchResults superheroData={superheroData} /> 
           </div>
         </div>
+      </div>  
       );
 }
 
