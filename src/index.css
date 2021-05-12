@@ -61,12 +61,12 @@ code {
 #search-input {
   margin-top: 20px;
   height: 50px;
-  width: 600px;
+  width: 503px;
   font-size: 20px;
 }
 
 #results-card {
-  padding: 20px;
+  padding: 5px 0px 2px 2px;
   margin: 20px;
   display: flex;
   align-items: center;
@@ -78,6 +78,7 @@ code {
 }
 
 #results-list {
+  padding: 0px;
   list-style-type: none;
 }
 
@@ -110,7 +111,6 @@ code {
 #result-profile-data {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   justify-content: space-between;
   width: 275px;
   height: 280px;
